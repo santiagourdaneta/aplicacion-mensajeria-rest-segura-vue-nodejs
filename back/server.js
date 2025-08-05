@@ -98,7 +98,7 @@ function createApp(dbInstance) {
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false,
+      secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       sameSite: 'Lax'
     }
